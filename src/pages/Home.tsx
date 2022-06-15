@@ -6,7 +6,9 @@ export function Home() {
       <div>
         <img src={Logo} />
       </div>
-      <span className="font-bold text-xl">Seja bem-vindo(a) *nome da pessoa</span>
+      <span className="font-bold text-3xl">
+        Seja bem-vindo(a) *nome da pessoa vindo do back-end
+      </span>
     </div>
   );
 }
