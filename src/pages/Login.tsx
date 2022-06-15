@@ -9,20 +9,20 @@ export function Login() {
         <img src={Logo} />
       </div>
       <span className="font-bold text-xl mb-4">Login</span>
-      <form className="flex flex-col w-1/4">
+      <form className="flex flex-col w-1/4" onSubmit={(e) => e.preventDefault()}>
         <label htmlFor="">E-mail</label>
         <input className="text-black rounded-xl mt-2 mb-4" type="email" />
         <label htmlFor="">Senha</label>
         <input className="text-black rounded-xl mt-2 mb-4" type="password" />
         <button className="border-2 rounded-xl mt-2 mb-4 p-1" type="submit">
-          Entrar
+          <Link to="/home">Entrar</Link>
         </button>
       </form>
       <span>
         Não tem cadastro?{" "}
         <Link className="hover:text-[#FECB9B]" to="/register">
           Cadastre-se aqui!
-        </Link>{" "}
+        </Link>
       </span>
     </div>
   );
