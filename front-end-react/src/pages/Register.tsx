@@ -10,27 +10,46 @@ export function Register() {
   const [password, setPassword] = useState("");
   let navigate = useNavigate();
 
-  const handleSubmit = useCallback(
-    (e: FormEvent) => {
-      e.preventDefault();
-      api
-        .post("/users/new", {
-          name,
-          email,
-          password,
-        })
-        .then(({ status, data }) => {
-          if (status === 201) {
-            toast.success(data.message);
-            navigate("/");
-          }
-        })
-        .catch(({ response }) => {
-          toast.error(response.data.error);
-        });
-    },
-    [name, email, password]
-  );
+  async function handleSubmit(e: FormEvent) {
+    e.preventDefault();
+    await api
+      .post("/users/new", {
+        name,
+        email,
+        password,
+      })
+      .then(({ status, data }) => {
+        if (status === 201) {
+          toast.success(data.message);
+          navigate("/");
+        }
+      })
+      .catch(({ response }) => {
+        toast.error(response.data.error);
+      });
+  }
+
+  // const handleSubmit = useCallback(
+  //   (e: FormEvent) => {
+  //     e.preventDefault();
+  //     api
+  //       .post("/users/new", {
+  //         name,
+  //         email,
+  //         password,
+  //       })
+  //       .then(({ status, data }) => {
+  //         if (status === 201) {
+  //           toast.success(data.message);
+  //           navigate("/");
+  //         }
+  //       })
+  //       .catch(({ response }) => {
+  //         toast.error(response.data.error);
+  //       });
+  //   },
+  //   [name, email, password]
+  // );
 
   return (
     <div className="flex flex-col items-center">

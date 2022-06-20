@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.jpg";
-import { Register } from "./Register";
 
 export function Login() {
   return (
@@ -11,9 +10,13 @@ export function Login() {
       <span className="font-bold text-xl mb-4">Login</span>
       <form className="flex flex-col w-1/4" onSubmit={(e) => e.preventDefault()}>
         <label htmlFor="">E-mail</label>
-        <input className="text-black rounded-xl mt-2 mb-4" type="email" />
+        <input className="text-black rounded-xl mt-2 mb-4" type="email" autoComplete="username" />
         <label htmlFor="">Senha</label>
-        <input className="text-black rounded-xl mt-2 mb-4" type="password" />
+        <input
+          className="text-black rounded-xl mt-2 mb-4"
+          type="password"
+          autoComplete="current-password"
+        />
         <button className="border-2 rounded-xl mt-2 mb-4 p-1" type="submit">
           <Link to="/home">Entrar</Link>
         </button>
