@@ -7,6 +7,7 @@ export const AppDataSource = new DataSource({
   entities: [User],
   subscribers: [],
   migrations: ["src/migrations/*.ts"],
+  logging: ["query"],
 });
 
 AppDataSource.initialize()
