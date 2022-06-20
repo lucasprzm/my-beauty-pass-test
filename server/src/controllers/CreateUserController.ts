@@ -9,18 +9,19 @@ export class CreateUserController {
     const { name, email, password } = request.body;
     const passwordHash = await hash(password, 10);
     if (!email) {
-      throw new Error("Incorrect email!");
+      throw new Error("E-mail não foi preenchido!");
     }
     const userAlreadyExists = await userRepository.findOneBy({ userEmail: email });
     if (userAlreadyExists) {
-      throw new Error("User already exists!");
+      throw new Error("Usuário já existe!");
     }
+
     const user = userRepository.create({
       userName: name,
       userEmail: email,
       userPassword: passwordHash,
     });
     await userRepository.save(user);
-    return response.status(200).json({ message: "Usuário criado!" });
+    return response.status(201).json({ message: "Usuário criado!" });
   }
 }
