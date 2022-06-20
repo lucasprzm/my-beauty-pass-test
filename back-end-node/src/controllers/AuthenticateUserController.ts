@@ -11,16 +11,16 @@ export class AuthenticateUserController {
     const { email, password } = request.body;
     const user = await userRepository.findOneBy({ userEmail: email });
     if (!user) {
-      throw new Error("Email/Password Incorrect!");
+      throw new Error("E-mail ou senha incorreta!");
     }
     const passwordMatch = compareSync(password, user.userPassword);
     if (!passwordMatch) {
-      throw new Error("Email/Password Incorrect!");
+      throw new Error("E-mail ou senha incorreta!");
     }
     const token = sign({ email: user.userEmail }, process.env.SECRET_KEY, {
       subject: user.userId,
       expiresIn: "1d",
     });
-    return response.status(200).json(token);
+    return response.status(200).json({ message: "Login realizado com sucesso!", token });
   }
 }
