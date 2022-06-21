@@ -12,13 +12,13 @@
 - [x] Tela de Cadastro
 - [x] Tela de Login
 - [x] Tela Home
-- [ ] Consumo de API no back-end
+- [x] Consumo de API no back-end
 
 ### Back-end
 
 - [x] Endpoint de cadastro de usuários
 - [x] Endpoint de autenticação (e-mail e senha) de usuário
-- [ ] Logout de usuário
+- [x] Logout de usuário
 
 ## Frameworks e Bibliotecas externas
 
@@ -40,36 +40,50 @@ Antes de começar, verifique se você tem os requisitos a seguir:
 
 - Versão LTS mais recente do NodeJS
 
-## 🚀 Installing
+## 🚀 Instalação
 
-In order to install the project, follow these steps:
+- Clone o projeto desse repositório;
+- Para instalar o projeto, siga as etapas seguintes para o front-end e back-end.
 
-Installing all dependencies:
+### Front-end
+
+Abra o terminal de sua preferência, acesse a pasta front-end-react e instale as dependências do projeto com o seguinte comando:
 
 ```
 npm install
 ```
 
-Compiles and hot-reloads for development:
+Após a instalação, utilize o comando seguinte para rodar o servidor:
 
 ```
-npm run serve
+npm run dev
 ```
 
-Compiles and minifies for production
+Pronto! O front-end estará rodando na porta 3000 do servidor local:
 
 ```
-npm run build
+http://localhost:3000
 ```
 
-_Observações:_
+### Back-end
 
-- Não é obrigatório o uso de banco de dados, mas é um diferencial.
-- Avaliaremos sua lógica, não se preocupe em concluir o desafio até o final mas sim de fazer da forma mais performática
-- Utilize a linguagem de sua preferencia
-- Deixe documentado como rodar o projeto
-- Utilize boas práticas de programação de acordo com a linguagem escolhida
-- Você tem 5 dias para completar o desafio a partir de hoje.
+Abra o terminal de sua preferência, acesse a pasta back-end-node e instale as dependências do projeto com o seguinte comando:
+
+```
+npm install
+```
+
+Após a instalação, utilize o comando seguinte para rodar o servidor:
+
+```
+npm run dev
+```
+
+Pronto! O back-end estará rodando na porta 3333 do servidor local e o front-end já pode criar usuários, fazer login e acessar a home.
+
+```
+http://localhost:3333
+```
 
 ## 🤝 Desenvolvedores
 
