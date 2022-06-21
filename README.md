@@ -22,19 +22,24 @@
 
 ## Frameworks e Bibliotecas externas
 
-- React - Framework JavaScript para construir interfaces de usuários.
-- React Router - usado para criar rotas para páginas diferentes do projeto.
-- Axios - usado para fazer requisições XMLHttp do navegador para a API.
-- Tailwind - framework responsivo criar sites responsivos.
-- Node.js
-- Express
-- TypeORM
-- Bcryptjs
-- JWT
-- Dotenv
-- Cors
+### Front-end
 
-## 💻 Pré requisitos para o projeto funcionar no seu computador
+- React - Framework JavaScript para construir interfaces de usuários.
+- React Router - usado para criar rotas no front-end do projeto.
+- Axios - usado para fazer requisições XMLHttp do navegador para a API.
+- Tailwind - framework responsivo para criar sites responsivos.
+
+### Back-end
+
+- Node.js - ambiente de execução JavaScript para criação de aplicações sem depender de um browser para execução.
+- Express - Framework para aplicações web com Node.js.
+- TypeORM - ORM para realizar as queries do banco de dados.
+- Bcryptjs - biblioteca para criptografar a senha dos novos usuários para serem salvos com segurança no banco de dados.
+- JWT - biblioteca para gerar tokens seguros de validação de acesso do front-end para o back-end.
+- Dotenv - biblioteca para utilização de variáveis de ambiente.
+- Cors - biblioteca que libera o CORS para acesso do front-end ao back-end.
+
+## 💻 Pré requisitos do projeto
 
 Antes de começar, verifique se você tem os requisitos a seguir:
 
@@ -79,7 +84,7 @@ Após a instalação, utilize o comando seguinte para rodar o servidor:
 npm run dev
 ```
 
-Pronto! O back-end estará rodando na porta 3333 do servidor local e o front-end já pode criar usuários, fazer login e acessar a home.
+Pronto! O back-end estará rodando na porta 3333 do servidor local e o front-end já pode criar usuários, fazer login e acessar a home. Lembre-se de criar um arquivo .env com a variável de ambiente especificada no arquivo .env.example para que os tokens criados pelo jwt sejam seguros.
 
 ```
 http://localhost:3333
