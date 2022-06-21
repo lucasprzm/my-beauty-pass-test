@@ -18,6 +18,7 @@
 
 - [x] Endpoint de cadastro de usuários
 - [x] Endpoint de autenticação (e-mail e senha) de usuário
+- [x] Criação da tabela de usuários no banco de dados (SQLite)
 - [x] Logout de usuário
 
 ## Frameworks e Bibliotecas externas
@@ -34,10 +35,13 @@
 - Node.js - ambiente de execução JavaScript para criação de aplicações sem depender de um browser para execução.
 - Express - Framework para aplicações web com Node.js.
 - TypeORM - ORM para realizar as queries do banco de dados.
+- SQLite - banco de dados.
 - Bcryptjs - biblioteca para criptografar a senha dos novos usuários para serem salvos com segurança no banco de dados.
 - JWT - biblioteca para gerar tokens seguros de validação de acesso do front-end para o back-end.
 - Dotenv - biblioteca para utilização de variáveis de ambiente.
 - Cors - biblioteca que libera o CORS para acesso do front-end ao back-end.
+- Uuid - biblioteca para criar identificadores únicos universais.
+- Beekeeper Studio - aplicativo utilizado para verificar o banco de dados SQLite e manipular a tabela durante os testes.
 
 ## 💻 Pré requisitos do projeto
 
