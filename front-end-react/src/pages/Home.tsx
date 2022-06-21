@@ -18,13 +18,13 @@ export function Home() {
         setName(data.name);
       } catch (error: any) {
         navigate("/");
-        toast.info("Favor realizar o login para continuar.", {
+        toast.error("Favor realizar o login para continuar.", {
           toastId: "prevent-duplicate",
         });
         //console.log(error.response.data.error);
       }
     } else {
-      toast.info("Favor realizar o login para continuar.", {
+      toast.error("Favor realizar o login para continuar.", {
         toastId: "prevent-duplicate-2",
       });
       navigate("/");
@@ -32,6 +32,7 @@ export function Home() {
   }
 
   function clearLocalStorage() {
+    toast.success("Logout realizado com sucesso!");
     localStorage.removeItem("token");
     navigate("/");
   }
